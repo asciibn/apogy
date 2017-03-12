@@ -1,0 +1,32 @@
+<div class="container-100vh">
+ <div>
+   <h3 >Welcome to <span class="textRed">He <span class="italic">or</span> She </span></h3></div>
+
+  <div><p>Enter any name below and be AMAZED by the Results</p></div>
+
+
+  <form class="form-inline" ng-submit="genderCtrl.getGender()" >
+    <div class="form-group">
+      <label for="personName"><h6 class="textRed">NAME</h6></label><br>
+      <input type="text" id="personName" class="form-control" required ng-model="genderCtrl.personName.name"> <br>
+      <input type="submit" value="SUBMIT" class="btn btn-danger" id="submitButton">
+    </div>
+  </form>
+
+    <div id="resultsContainer" ng-show="genderCtrl.showResults">
+         <div ng-switch="genderCtrl.results.gender">
+             <div ng-switch-when="male">
+                 <img src="images/male-answer.png">
+                 <h1 class="textRed">MALE</h1>
+             </div>
+             <div ng-switch-when="female">
+                 <img src="images/female-answer.png">
+                 <h1 class="textRed">FEMALE</h1>
+             </div>
+             <div><p>The Probability is : <span class="textRed">{{genderCtrl.results.accuracy}}%</span></p></div>
+             <div><p>Sample size is : <span class="textRed">{{genderCtrl.results.samples | number}}</span></p></div>
+             <div><p>Response time was: <span class="textRed">{{genderCtrl.results.duration}}</span></p></div>
+         </div>
+    </div>
+
+</div>

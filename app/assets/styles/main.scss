@@ -1,0 +1,19 @@
+// COMMONS
+
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// include: "type": "scss", "basePath": "app", "files": "common/**/*.scss"
+
+// /include
+
+// END COMMONS
+
+// COMPONENTS
+
+// include: "type": "scss", "basePath": "app", "files": "components/**/main/*.scss"
+@import "components/home/styles/main/_home.scss";
+// /include
+
+// END COMPONENTS

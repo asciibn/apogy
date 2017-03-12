@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="apogy">
+  <head>
+    <meta charset="utf-8">
+    <title>apogy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="fragment" content="!">
+    <base href="/"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css({app,.}) assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- build:css(.tmp) assets/styles/main.css -->
+
+    <!-- include: "type": "css", "basePath": ".tmp", "files": "**/*.css" -->
+    <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+    <!-- /include -->
+
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+      <div id="container-view" ui-view></div>
+    <!--[if lte IE 9]-->
+    <!-- build:js(.) scripts/shim.js -->
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <!-- endbuild -->
+    <!-- [endif]-->
+
+    <!-- build:js({app,.}) scripts/main.js -->
+
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/placeholders/dist/placeholders.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-cache/dist/angular-cache.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <!-- endbower -->
+
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app,.}) scripts/scripts.js -->
+
+    <!-- include: "type": "js", "basePath": "app", "files": ["common/**/*.js", "!common/**/*.scenario.js", "!common/**/*.spec.js"], "ordering": "top-down" -->
+    <script src="common/app/app.module.js"></script>
+    <script src="common/cache/cache.module.js"></script>
+    <script src="common/cache/factories/cache.factory.js"></script>
+    <script src="common/env/env.js"></script>
+    <!-- /include -->
+
+    <!-- include: "type": "js", "basePath": "app", "files": ["components/**/*.js", "!components/**/*.scenario.js", "!components/**/*.spec.js"], "ordering": "top-down" -->
+    <script src="components/home/home.module.js"></script>
+    <script src="components/home/controllers/gender.controller.js"></script>
+    <script src="components/home/services/gender.service.js"></script>
+    <!-- /include -->
+
+    <!-- endbuild -->
+
+</body>
+</html>
